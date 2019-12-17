@@ -1,6 +1,7 @@
 package com.ahhf.cly.Fda;
 
 import java.util.Date;
+import java.util.UUID;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +20,7 @@ public class App {
 
     @GetMapping("test123")
     public Object fa() {
+        log.info(UUID.randomUUID().toString());
         log.info("当前的时间啊11111111111：" + new Date().toLocaleString());
         return "当前的时间啊11111111111：" + new Date().toLocaleString();
     }
